@@ -1,0 +1,122 @@
+body{
+	background-image: url("c:/Users/marin/Documents/L2/Web Avancé/escape_game/Images/Accueil/fond.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.global{
+	background-image: url("c:/Users/marin/Documents/L2/Web Avancé/escape_game/Images/Accueil/parchemin.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 90px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.boutton{
+	background-color: white;
+	border: 2px solid grey;
+	box-shadow: 0 9px grey;
+	border-radius: 8px;
+	color: black;
+	padding: 14px 35px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 14px 2px;
+	cursor: pointer;
+	width: auto;
+		
+	
+}
+
+.boutton:hover{
+	background-color: palegreen;
+	color: white;
+	transition-duration: 0.5s;
+}
+
+.boutton:active{
+	box-shadow: 0 5px grey;
+	transform: translateY(6px);
+}
+
+
+#regles{
+	position: absolute;
+	bottom: 2%;
+	left: 5%;
+}
+
+.popup{ /* position generale des popup */
+	position: relative;
+	text-align: center;
+	width: 200px;
+}
+
+#regles_popup{ /* masquer la popup*/
+	display: none;
+	background-color: white;
+	border: 2px solid palegreen;
+	color: black;
+	border-radius: 8px;
+	padding: 200px 300px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 5;
+}
+
+
+#accueil{
+	position: absolute;
+	bottom: 2%;
+	right: 5%;
+}
+
+.imagesGauche{
+	position: absolute;
+	bottom: 85px;
+}
+
+#nuage{
+	position: relative;
+	z-index: 1;
+	left: 2%;
+	bottom: 0px;
+	
+}
+
+#personnage{
+	position: absolute;
+	z-index: 2;
+	left: 290px;
+	bottom: 90px;
+}
+
+#bulle{
+	position: absolute;
+	z-index: 3;
+	left: 270px;
+	bottom: 225px;
+}
+
+#bienvenue{
+	position: absolute;
+	z-index: 4;
+	left: 285px;
+	bottom: 260px;
+}
+
+.imageDroite{
+	position: absolute;
+	top: 20%;
+	right: 20%;
+}
