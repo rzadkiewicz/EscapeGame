@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page d'accueil</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="http://localhost/Escape_Game/css/accueil_jeux.css"/>
+	<script type="text/javascript" src="http://localhost/Escape_Game/js/accueil_jeux.js"></script>
+</head>
+<body>
+
+<!--/********* Images de fond *********/-->
+
+	<div class="imagesGauche">
+		<img id="nuage" src="http://localhost/Escape_Game/image/Accueil/nuage.png" alt="Nuage" height="200">
+
+		<img id="personnage" src="http://localhost/Escape_Game/image/Accueil/Personnage.png" alt="Personnage" height="150">
+
+		<img id="choisie" src="http://localhost/Escape_Game/image/Accueil/choisie.png" alt="Choisie" width="250">
+
+		<img id="bulle" src="http://localhost/Escape_Game/image/Accueil/Bulle.png" alt="Bulle" width="290">
+
+	</div>
+	<div class="imageDroite">
+		<img id="nuageporte" src="http://localhost/Escape_Game/image/Accueil/nuageporte.png" alt="Nuage avec une Porte" width="220">
+	
+	</div>
+
+
+	<div class ="global">
+
+
+<!--/********* Escape Game *********/-->
+
+
+		<div class="boutton" onclick="ouvrirFacile()" id="Facile">
+			<span>Facile</span>
+		</div>
+		<div class="popup_salle" id="facile_popup">
+			<form id="facile_form">
+				<div class="boutton" onclick="ouvrirEscapeGame()" id="salleF1">
+			        <span>Salle n°1</span>
+		        </div>
+				<div class="boutton" onclick="" id="salleF2">
+			        <span>Salle n°2</span>
+		        </div>
+				<div class="boutton" onclick="" id="salleF3">
+			        <span>Salle n°3</span>
+		        </div>
+				<div class="boutton" onclick="" id="salleF4">
+			        <span>Salle n°4</span>
+		        </div>
+				<div class="boutton" onclick="" id="salleF5">
+			        <span>Salle n°5</span>
+		        </div>
+			</form>
+		</div>
+		
+
+
+
+
+<!--/********* Règles du jeu *********/-->
+
+	<div class="boutton" onclick="ouvrirRegles()" id="regles">
+		<span>Règles</span>
+	</div>
+
+	<div class="popup" id="regles_popup">
+		<h1>Règles du jeu</h1>
+		<p id="paragrapheregle">
+			Bienvenu(e) dans l'escape game. Pour mieux comprendre le réroulement du jeu, voici quelques explications...<br><br>Avant de commencer une partie, vous avez la possibilité de vous connecter à votre compte ou d'en créer un, si vous n'avez pas encore de compte. Jouer en étant connecté à votre compte vous permettra de sauvegarder les scores obtenus lors de vos différentes parties, ou de joueur avec vos amis grâce au mode multijoueur. Si vous souhaitez faire une partie sans être connecté à un compte, votre partie ne sera pas sauvegardée. À vous de choisir!<br>Une fois le type de partie séléctionée, vous serez redirigé vers les modes de difficulté de la partie... 3 modes s'offrent à vous:<br><br><b><i>Facile:</i></b><br>pour accéder à la salle suivante, vous devez répondre correctement à une seule question. Dans ce mode, vous ne serz pas pénalisé par vos fautes ou par le manque de temps!<br><br><b><i>Moyen:</i></b><br>dans ce mode, vous pouvez avoir jusqu'à deux énigmes à résoudre avant de pouvoir accéder à la salle suivante. Vous serez pénalisé lors de la saisie d'une mauvaise réponse!<br><br><b><i>Difficile:</i></b><br>vous pouvez avoir jusqu'à quatre énigmes par salle! Là aussi une mauvaise réponse vous sera pénalisée.<br><br><ins>Bonne chance!</ins>
+		</p><br>
+	</div>
+
+
+
+<!--/********* Page D'accueil *********/-->
+
+	<div class="boutton" onclick="revenirPageAccueil()" id="accueil_jeux">
+		<span>Accueil</span>
+	</div>
+
+</body>
+</html>
