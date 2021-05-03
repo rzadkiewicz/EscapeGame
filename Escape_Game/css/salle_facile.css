@@ -1,0 +1,156 @@
+html {
+	max-height: 720px;
+	max-width: 1280px;
+	position:relative;
+}
+
+body{
+	background-color: black;
+	color : white;
+}
+
+#portail {
+	width: 160px;
+	left: -18%;
+	position: absolute;}
+
+	
+#parquet{
+	height: 450px;
+	width: 80%;
+	margin: auto;
+	background-image:url(http://localhost/Escape_Game/image/Salle/Parquet1.png);}
+#jeu{
+	font-size: 40px;
+	color: white;}
+#haut{
+	font-size: 140%;
+	color: white;
+	height: 95px;}
+#table{
+	position: absolute;
+	width: 150px;
+	top: 50%;
+	left: 63%;}
+#bonhomme{
+	position: absolute;
+	max-width: 100px;
+	top: 35%;
+	left: 70%;}
+#bonhommeContent{
+	position: absolute;
+	max-width: 100px;
+	top: 35%;
+	left: 70%;
+}
+#bulle{
+	width: 430px;
+	left: 60%;
+	top:10%;
+	position: absolute;}
+#bulle span{
+	color: black;
+	font-size: 45%;
+	margin-top: 4%;}
+#imageBulle{
+	width: 430px;}
+#porte{
+	width: 110px;
+	left: 50%;
+	position: absolute;}
+#imagePorte{
+	width: 100%;}
+#haut span{
+	left: 13%;
+	position: absolute;
+	top : 3%;}
+#cadenas{
+	width: 70px;
+	left: 40%;
+	position: absolute;}
+#cadenasouvert {
+	width: 70px;
+	left: 40%;
+	position: absolute;
+}
+#zoneReponse{
+	top: 10px;
+	position: relative;
+}
+#reponse{
+	font-size: 80%;
+	left:10px;
+	position: relative;
+}
+#numSalle{
+	position: absolute;
+	top: 2%;
+	width: 20%;}
+#valider{
+	position: absolute;
+	height: 46px;}
+#compteur{
+	position: absolute;
+	left: 25%;
+	top: 2%;
+	border : solid;}
+#coupe{
+	left:65%;
+	top:32%;
+	position:absolute;}
+
+.indice {
+  position: fixed;
+  top: 75%;
+  left: 20%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.indice.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.indice-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indice-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.indice-body {
+  padding: 10px 15px;
+  color: black;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
