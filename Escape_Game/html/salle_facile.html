@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>salle facile</title>
+	<link rel="stylesheet" href="http://localhost/Escape_Game/css/salle_facile.css" />
+</head>
+<body>
+	<div id="jeu">
+		<div id="haut">
+			<div id="numSalle" >
+
+			<span id="salle">Salle N°1</span>
+
+			</div>
+               <div id="compteur"></div>
+			<div id="porte">
+				<img id="imagePorte" src="http://localhost/Escape_Game/image/Salle/porte.png"/>
+				<a onclick="NvSalle()" >
+				<img id="portail" src="http://localhost/Escape_Game/image/SalleFinie/portail.png" style="visibility: hidden"/>
+			</a>
+			</div>
+			<a onclick="valider()" ><img id="cadenas" src="http://localhost/Escape_Game/image/Salle/cadenas.png"/></a>
+			<img id="cadenasouvert" src="http://localhost/Escape_Game/image/SalleFinie/cadenasOuvert.png" style="visibility: hidden"/>
+			<div id="bulle">		
+				<img id="imageBulle" src="http://localhost/Escape_Game/image/Salle/Bulle.png"/>
+				<span id="quest"></span>
+			</div>	
+		</div>
+		<div id="parquet" >
+			<img id="bonhomme" src="http://localhost/Escape_Game/image/Salle/bonhomme.png" />
+			<img id="bonhommeContent" src="http://localhost/Escape_Game/image/SalleFinie/BonhommeContent.png" style="visibility: hidden"/>
+			<img id="table" src="http://localhost/Escape_Game/image/Salle/table.png" />
+
+			
+		</div>
+
+		<div id="zoneReponse">
+			Réponse : 
+			<input type="text" id="reponse" name="jaaj" required size="60">
+		</div>
+			<button data-indice-target="#indice">Indice</button>
+		  <div class="indice" id="indice">
+		    <div class="indice-header">
+		      <button data-close-button class="close-button">&times;</button>
+		    </div>
+		    <div class="indice-body" id="indice-body">
+		     Indice : ...
+		    </div>
+
+			</div>
+</body>
+<script type="text/javascript" src="http://localhost/Escape_Game/js/salle_facile.js"></script>
+</html>
