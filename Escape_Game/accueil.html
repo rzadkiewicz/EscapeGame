@@ -33,33 +33,33 @@
 		</div>
 		<div class="popup" id="inscription_popup">
 			<h1>Inscription</h1>
-			<form method="post" id="inscription_form">
+			<form id="inscription_form" action="inscription.php" method="POST">
 				<div id="formulaire">
-					<div>
-						<label for="Nom">Nom:</label>
-						<input type="text" id="Nom" name="Nom">
+					<div class="champs">
+						<label for="nom">Nom:</label>
+						<input class="input" type="text" name="nom" required>
 					</div>
-					<div>
-						<label for="Prenom">Prénom:</label>
-						<input type="text" id="Prenom" name="Prenom">
+					<div class="champs">
+						<label for="prenom">Prénom:</label>
+						<input class="input" type="text" name="prenom" required>
 					</div>
-					<div>
-						<label for="AdresseMail">Adresse mail:</label>
-						<input type="text" id="AdresseMail" name="AdresseMail">
+					<div class="champs">
+						<label for="email">Adresse mail:</label>
+						<input class="input" type="email" name="email" required>
 					</div>
-					<div>
-						<label for="MDP">Mot de passe:</label>
-						<input type="text" id="MDP" name="MDP">
+					<div class="champs">
+						<label for="mdp">Mot de passe:</label>
+						<input class="input" type="password" name="mdp" required>
 					</div>
-					<div>
-						<label for="VMDP">Confirmation mot de passe:</label>
-						<input type="text" id="VMDP" name="VMDP">
+					<div class="champs">
+						<label for="vmdp">Confirmation mot de passe:</label>
+						<input class="input" type="password" name="vmdp" required>
 					</div>
 				</div>
 				<div>
-					<input type="button" value="Valider" onClick="verifInscription()"/>
+					<input type="submit" name="validerform" value="Valider"/>
 				</div>
-			</form>
+			</form>	
 		</div>
 		
 
@@ -72,7 +72,7 @@
 		</div>
 		<div class="popup" id="connexion_popup">
 			<h1>Connexion</h1>
-			<form id="connexion_form">
+			<form id="connexion_form" action="connection.php" method="POST">
 				<div id="formulaire">
 					<div>
 						<label for="AdresseMail">Adresse mail:</label>
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				<div>
-					<input type="button" value="Valider"/> <!-- verifier saisie-->
+					<input type="submit" value="Valider"/> <!-- verifier saisie-->
 				</div>	
 				
 			</form>
