@@ -109,7 +109,7 @@ var indices_fac = ['Cascading St..e Sh....',
 'Il y en a 525600 en une année',
 'Pousser en anglais',
 "C'est également un style de musique",
-'<initiales de lignes de table en anglais>',];
+'initiales de lignes de table en anglais',];
 
 var x = Math.floor(Math.random() * enigmes_fac.length);
 
