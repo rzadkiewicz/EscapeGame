@@ -121,8 +121,19 @@ function timer() {
     s=duree;
     m=0;h=0;
     if(s<0) {
-        compteur.innerHTML="perdu<br />"
-        document.location.href="gameover.html";
+        document.getElementById("cadenas").style.visibility ="hidden";
+        document.getElementById("bonhommeContent").style.visibility ="hidden";
+        document.getElementById("imageBulle").style.visibility ="hidden";
+        document.getElementById("quest").style.visibility ="hidden";
+        document.getElementById("compteur").style.visibility ="hidden";
+        document.getElementById("boutonskip").style.visibility ="hidden";
+        document.getElementById("porte").style.visibility ="hidden";
+        document.getElementById("indices").style.visibility ="hidden";
+        document.getElementById("zoneReponse").style.visibility ="hidden";
+        document.getElementById("livre").style.visibility ="hidden";
+        document.getElementById("parquet").style.visibility ="hidden";
+        document.getElementById("salle").style.visibility ="hidden";
+        document.getElementById("perdu").style.visibility ="visible";
     }
     else {
         if(s>59){
