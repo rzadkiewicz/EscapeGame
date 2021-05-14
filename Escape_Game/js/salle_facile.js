@@ -153,7 +153,7 @@ function timer() {
         compteur.innerHTML=h+":"+m+":"+s
     }
     duree=duree-1;
-    window.setTimeout("timer();",1000);
+    start = window.setTimeout("timer();",1000);
 }
 
 duree="600";
@@ -225,9 +225,7 @@ function revenirPageAccueil(){
 
 function Fin(){
     if (numsalle > 10) {
-        //var score_final = duree;
-        //document.location.href="victoire.html";
-
+        clearTimeout(start);
         document.getElementById("cadenas").style.visibility ="hidden";
         document.getElementById("bonhommeContent").style.visibility ="visible";
         document.getElementById("imageBulle").style.visibility ="hidden";
