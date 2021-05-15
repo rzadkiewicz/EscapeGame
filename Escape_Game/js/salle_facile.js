@@ -202,6 +202,7 @@ function SalleFinie() {
 function NvSalle(){
     
     document.getElementById("reponse").value ="";
+    closeIndice();
     document.getElementById("livre").style.visibility ="visible";
     document.getElementById("boutonskip").style.visibility ="visible";
     document.getElementById("cadenasouvert").style.visibility ="hidden";
