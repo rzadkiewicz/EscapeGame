@@ -67,7 +67,7 @@
 
         //ajout de l'utilisateur si tous les champs ont été remplis correctement
         if($valide){
-          echo 'Bienvenu(e)' .$prenom. .$nom. '!';
+          echo 'Bienvenu(e)' .$prenom .$nom. '!';
           $idaleatoire= idAleatoire();
           $nouvutilisateur=ajoutUtilisateur($idaleatoire, $nom, $prenom, $email, $mdp);
         }
