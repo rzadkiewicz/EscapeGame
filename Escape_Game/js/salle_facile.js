@@ -197,12 +197,12 @@ function SalleFinie() {
     reponses_fac.splice(x,1);
     enigmes_fac.splice(x,1);
     indices_fac.splice(x,1);
+    closeIndice(indice);
 }
 
 function NvSalle(){
     
     document.getElementById("reponse").value ="";
-    button.closest('#indice-body');
     document.getElementById("livre").style.visibility ="visible";
     document.getElementById("boutonskip").style.visibility ="visible";
     document.getElementById("cadenasouvert").style.visibility ="hidden";
