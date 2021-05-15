@@ -3,8 +3,8 @@
 <head>
 	<title></title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="accueil.css"/>
-	<script type="text/javascript" src="accueil.js"></script>
+	<link rel="stylesheet" href="http://localhost/Escape_Game/css/accueil.css"/>
+	<script type="text/javascript" src="http://localhost/Escape_Game/js/accueil.js"></script>
 </head>
 <body>
 <div class ="global">
