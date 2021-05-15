@@ -39,16 +39,22 @@
 			Réponse : 
 			<input type="text" id="reponse" name="jaaj" required size="60">
 		</div>
-			<button data-indice-target="#indice">Indice</button>
+
+		<div id="indices">
+			<a data-indice-target="#indice"><img id="livre" src="http://localhost/Escape_Game/image/Salle/livre.png"/></a>
 		  <div class="indice" id="indice">
 		    <div class="indice-header">
 		      <button data-close-button class="close-button">&times;</button>
 		    </div>
-		    <div class="indice-body" id="indice-body">
+		    <div id="indice-body">
 		     Indice : ...
 		    </div>
-			<span id="perdu" style="visibility: hidden">GAME OVER!</span>
+
 			</div>
+		</div>
+
+		<span id="perdu" style="visibility: hidden">GAME OVER!</span>
+	</div>
 </body>
 <script type="text/javascript" src="http://localhost/Escape_Game/js/salle_facile.js"></script>
 </html>
