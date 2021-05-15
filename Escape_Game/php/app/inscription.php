@@ -31,7 +31,7 @@
         if (!isset($_POST['prenom'])) {
           $valide=false;
           $prenomErreur .= '<span class="erreur">Vous devez saisir votre prénom</span>';
-        }elseif (strlen($_POST['prenom'])) > 16) {
+        }elseif ((strlen($_POST['prenom'])) > 16) {
           $valide=false;
           $prenomErreur .= '<span class="erreur">Votre prenom est trop long</span>';
         } else {
