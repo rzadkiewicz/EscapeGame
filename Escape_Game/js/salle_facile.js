@@ -220,7 +220,7 @@ function NvSalle(){
 }
 
 function revenirPageAccueil(){
-    document.location.href = "http://localhost/Escape_Game/image/Salle/accueil.html";
+    document.location.href = "http://localhost/Escape_Game/accueil.html";
 }
 
 function Fin(){
