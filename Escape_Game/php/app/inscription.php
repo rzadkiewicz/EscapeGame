@@ -22,7 +22,7 @@
         if (!isset($_POST['nom'])){
           $valide=false;
           $nomErreur .= '<span class="erreur">Vous devez saisir votre nom</span>';
-        } elseif (strlen($_POST['nom'])) > 16) {
+        } elseif ((strlen($_POST['nom'])) > 16) {
           $valide=false;
           $nomErreur .= '<span class="erreur">Votre nom est trop long</span>';
         } else {
