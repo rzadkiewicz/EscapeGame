@@ -19,7 +19,7 @@
       $valide=true; //retourne VRAI si le formulaire est bien remplis, sinon FAUX
 
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (!isset($_POST['nom']){
+        if (!isset($_POST['nom'])){
           $valide=false;
           $nomErreur .= '<span class="erreur">Vous devez saisir votre nom</span>';
         } elseif (strlen($_POST['nom'])) > 16) {
