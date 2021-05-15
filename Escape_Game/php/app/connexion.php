@@ -20,12 +20,13 @@
 		if ($_SERVER['REQUEST_METHOD']== 'POST') {
 			if (!isset($_POST['email'])|| existeEmail($_POST['email'])==0){
 				$valide=false;
-				$emailErreur .= '<span class="erreur">Aucun compte existe à cette adresse mail</span>';
+				$emailErreur .= '<span class="erreur">Aucun compte existe à cette adresse mail.</span>';
 			}else {
           $email = test_input($_POST['email']);
 			}
-			if (!isset($_POST['mdp'])||) {
-				# code...
+			if (!isset($_POST['mdp'])|| mdpCorrect($_POST['mdp'])==0) {
+				$valide=false;
+				$mdpErreur .= '<span classe="erreur"> Le mot de passe ne correspond pas.</span>';
 			}
 		}
 		?>
@@ -47,6 +48,3 @@ function mdpCorrect($mdp){
 	$mdp= $mypdo-> query("SELECT mdp FROM utilisateur WHERE mdp = '$mdp' AND ");
 
 }
-
-
-
