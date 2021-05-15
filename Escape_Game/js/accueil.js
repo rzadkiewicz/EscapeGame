@@ -11,7 +11,9 @@ function ouvrirConnexion(){
 }
 
 function revenirPageAccueil(){
-	document.location.href = "accueil.html";
+	document.getElementById("regles_popup").style.display="none";
+	document.getElementById("inscription_popup").style.display="none";
+	document.getElementById("connexion_popup").style.display="none";
 }
 
 function modeJseul(){
