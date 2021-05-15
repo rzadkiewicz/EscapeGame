@@ -202,7 +202,7 @@ function SalleFinie() {
 function NvSalle(){
     
     document.getElementById("reponse").value ="";
-    document.querySelectorAll('[data-close-button]')
+    button.closest('.indice');
     document.getElementById("livre").style.visibility ="visible";
     document.getElementById("boutonskip").style.visibility ="visible";
     document.getElementById("cadenasouvert").style.visibility ="hidden";
