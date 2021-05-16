@@ -16,8 +16,8 @@
 <head>
 	<title>Page d'accueil</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="http://localhost/Escape_Game bis/css/accueil_jeux.css"/>
-	<script type="text/javascript" src="http://localhost/Escape_Game bis/js/accueil_jeux.js"></script>
+	<link rel="stylesheet" href="http://localhost/Escape_Game/css/accueil_jeux.css"/>
+	<script type="text/javascript" src="http://localhost/Escape_Game/js/accueil_jeux.js"></script>
 </head>
 <body>
 
@@ -29,14 +29,14 @@
 		<div id="nuagediv">
 			<div id="personnagemessage">
 				<div id="message">
-				<img id="bienvenue" src="http://localhost/Escape_Game bis/image/Accueil/bienvenue.png" alt="Bienvenue" width="150">
+				<img id="bienvenue" src="http://localhost/Escape_Game/image/Accueil/bienvenue.png" alt="Bienvenue" width="150">
 				</div>
 			</div>	
 		</div>
 
 	</div>
 	<div id="imageDroite">
-		<img id="nuageporte" src="http://localhost/Escape_Game bis/image/Accueil/nuageporte.png" alt="Nuage avec une Porte" width="220">
+		<img id="nuageporte" src="http://localhost/Escape_Game/image/Accueil/nuageporte.png" alt="Nuage avec une Porte" width="220">
 	
 	</div>
 
