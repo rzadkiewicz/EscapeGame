@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+	
+<?php 
+
+ if (!empty($_SESSION['auth'])){ header('Location:  html/accueil_jeux.php');}
+
+?>
 <head>
 	<title>Page d'accueil</title>
 	<meta charset="utf-8"/>
@@ -31,6 +37,78 @@
 		<div class="boutton" onclick="ouvrirInscription()" id="inscription">
 			<span>Inscription</span>
 		</div>
+		<?php 
+	
+		//fichier utile
+						
+		require('php/app/Database.php');
+      
+      // déclaration des variables + initialiastion
+	  
+      $nomErreur = $prenomErreur = $emailErreur = $mdpErreur = $vmdpErreur = '';
+      $nom = $prenom = $email = $mdp = $vmdp = '';
+      $valide=true; //retourne VRAI si le formulaire est bien remplis, sinon FAUX
+
+        if (empty($_POST['nom'])){
+          $valide=false;
+          $nomErreur .= '<span class="erreur">Vous devez saisir votre nom</span>';
+        } elseif ((strlen($_POST['nom'])) > 16) {
+          $valide=false;
+          $nomErreur .= '<span class="erreur">Votre nom est trop long</span>';
+        } else {
+          $nom = test_input($_POST['nom']);
+        }
+		  if (empty($_POST['prenom'])) {
+          $valide=false;
+          $prenomErreur .= '<span class="erreur">Vous devez saisir votre prénom</span>';
+        }elseif ((strlen($_POST['prenom'])) > 16) {
+          $valide=false;
+          $prenomErreur .= '<span class="erreur">Votre prenom est trop long</span>';
+        } else {
+          $prenom = test_input($_POST['prenom']);
+        }
+        if (empty($_POST['email'])) {
+          $valide=false;
+          $emailErreur .= '<span class="erreur">Vous devez saisir une addresse mail</span>';
+        } else {
+          $email = test_input($_POST['email']);
+        }
+        if (empty($_POST['mdp'])) {
+          $valide=false;
+          $mdpErreur .= '<span class="erreur">Vous devez saisir un mot de passe</span>';
+        } else {
+          $mdp = test_input($_POST['mdp']);
+        }
+        if (empty($_POST['vmdp'])) {
+          $valide=false;
+          $vmdpErreur .= '<span class="erreur">Vous devez saisir une confirmation de votre mot de passe</span>';
+        } elseif ($_POST['vmdp']!=$mdp) {
+          $valide=false;
+          $vmdpErreur .= '<span class="erreur">Vous devez saisir le même mot de passe</span>';
+        } else {
+          $vmdp = test_input($_POST['vmdp']);
+        }
+        if (empty($_POST['email'])) {
+          $valide=false;
+          $emailErreur.='<span class="erreur">Veuillez entrer un email</span>';
+        } elseif (!existe('@',$_POST['email'])|| !existe('.',$_POST['email'])){
+			$valide=false;
+			$emailErreur.='<span class="erreur">Veuillez entrer un email valide</span>';
+        } else {
+			$email= $_POST['email'];
+        }
+      
+
+        //ajout de l'utilisateur si tous les champs ont été remplis correctement
+        if($valide){
+	      $db = new Database('escapegame');
+          $db -> query('INSERT INTO utilisateur VALUE (NULL, "'.$_POST['nom'].'", "'.$_POST['prenom'].'", "'.$_POST['email'].'", "'.$_POST['mdp'].'")');
+		  $user = $db -> queryR('SELECT * FROM utilisateur WHERE email = "'.$_POST['email'].'"');
+		  session_start();
+		  $_SESSION['auth'] = $user;
+		  header('Location: html/accueil_jeux.php');
+        }
+      ?>
 		<div class="popup" id="inscription_popup">
 				<h1>Inscription</h1>
 				<form id="inscription_form" action="" method="POST">
@@ -134,4 +212,21 @@
 	
 
 </body>
+<?php
+function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+function existe($x, $mot){
+  for ($i=0; $i < strlen($mot); $i++) { 
+    if ($mot[$i]== $x) {
+      return true;
+    }
+  }
+  return false;
+}
+
+?>
 </html>
