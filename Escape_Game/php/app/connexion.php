@@ -11,7 +11,7 @@
 	<div class="popup" id="connexion_popup">
 		<?php 
 		//connecter à la bdd
-		require('Database.php');
+		require('default.php');
 		// déclaration des variables + initialiastion
 		$emailErreur = $mdpErreur = '';
 		$nom = $prenom = $email = '';
