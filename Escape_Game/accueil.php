@@ -33,7 +33,7 @@
 		</div>
 		<div class="popup" id="inscription_popup">
 				<h1>Inscription</h1>
-				<form id="inscription_form" action="http://localhost/Escape_Game/php/inscription.php" method="POST">
+				<form id="inscription_form" action="" method="POST">
 					<div id="formulaire">
 						<div class="champs">
 							<label for="nom">Nom:</label>
