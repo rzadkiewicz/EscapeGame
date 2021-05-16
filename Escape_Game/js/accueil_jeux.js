@@ -19,7 +19,7 @@ function ouvrirRegles(){
 
 
 function revenirPageAccueil(){
-	document.location.href = "http://localhost/Escape_Game/html/accueil_jeux.html";
+	document.location.href = "http://localhost/Escape_Game/html/accueil_jeux.php";
 }
 
 function ouvrirEscapeGame(){
