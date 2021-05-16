@@ -76,11 +76,11 @@
 				<div id="formulaire">
 					<div class="champs">
 						<label for="AdresseMail">Adresse mail:</label>
-						<input class="input" type="text" id="AdresseMail" name="AdresseMail">
+						<input class="input" type="email" id="AdresseMail" name="AdresseMail" required placeholder="e.g. kevin.blanc@gmail.com" pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z.]{2,15}" title="Votre adresse mail n'est pas valide!">
 					</div>
 					<div class="champs">
 						<label for="MDP">Mot de passe:</label>
-						<input class="input" type="text" id="MDP" name="MDP">
+						<input class="input" type="password" id="MDP" name="MDP" required>
 					</div>
 				</div>
 				<div>
