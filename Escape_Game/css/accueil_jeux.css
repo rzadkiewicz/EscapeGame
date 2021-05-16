@@ -1,3 +1,4 @@
+
 body{
 	background-image: url("http://localhost/Escape_Game/image/Accueil/fond.png");
 	background-repeat: no-repeat;
@@ -34,6 +35,27 @@ body{
 	
 }
 
+#bienvenue{/*image dans div*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -80%);
+	width: 80%;
+	visibility:hidden;
+}
+
+#accueil{
+	position: absolute;
+	right: 0%;	
+}
+#nuageporte{/*image*/
+	position: absolute;
+	left: 0%;
+	top: 15%;
+	visibility:hidden;
+}
+
 .boutton:hover{
 	background-color: palegreen;
 	color: white;
@@ -67,6 +89,7 @@ body{
 	align-items: top;
 	padding: 150px 80px;
 	z-index: 5;
+	visibility:hidden;
 }
 
 #regles{
@@ -252,6 +275,7 @@ h1{
 	z-index: 1;
 	left: 2%;
 	bottom: 0px;
+	visibility:hidden;
 	
 }
 
