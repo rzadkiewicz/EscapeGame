@@ -22,6 +22,6 @@ function revenirPageAccueil(){
 	document.location.href = "http://localhost/Escape_Game/html/accueil_jeux.php";
 }
 
-function ouvrirEscapeGame(){
+function modeJseul(){
 	document.location.href = "http://localhost/Escape_Game/html/salle_facile.html";
 }
