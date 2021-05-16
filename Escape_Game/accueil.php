@@ -32,35 +32,35 @@
 			<span>Inscription</span>
 		</div>
 		<div class="popup" id="inscription_popup">
-			<h1>Inscription</h1>
-			<form id="inscription_form" action="inscription.php" method="POST">
-				<div id="formulaire">
-					<div class="champs">
-						<label for="nom">Nom:</label>
-						<input class="input" type="text" name="nom">
+				<h1>Inscription</h1>
+				<form id="inscription_form" action="http://localhost/Escape_Game/php/inscription.php" method="POST">
+					<div id="formulaire">
+						<div class="champs">
+							<label for="nom">Nom:</label>
+							<input class="input" type="text" name="nom" required placeholder="e.g. Kevin" pattern="[a-zA-Z]{1,}" title="Votre nom n'est pas valide!">
+						</div>
+						<div class="champs">
+							<label for="prenom">Prénom:</label>
+							<input class="input" type="text" name="prenom" required placeholder="e.g. Blanc" pattern="[a-zA-Z]{1,}" title="Votre prénom n'est pas valide!">
+						</div>
+						<div class="champs">
+							<label for="email">Adresse mail:</label>
+							<input class="input" type="email" name="email" required placeholder="e.g. kevin.blanc@gmail.com" pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z.]{2,15}" title="Votre adresse mail n'est pas valide!">
+						</div>
+						<div class="champs">
+							<label for="mdp">Mot de passe:</label>
+							<input class="input" type="password" name="mdp" required>
+						</div>
+						<div class="champs">
+							<label for="vmdp">Confirmation mot de passe:</label>
+							<input class="input" type="password" name="vmdp" required title="La confirmation n'est pas valide!">
+						</div>
 					</div>
-					<div class="champs">
-						<label for="prenom">Prénom:</label>
-						<input class="input" type="text" name="prenom">
+					<div>
+						<input type="submit" name="validerform" value="Valider"/>
 					</div>
-					<div class="champs">
-						<label for="email">Adresse mail:</label>
-						<input class="input" type="email" name="email">
-					</div>
-					<div class="champs">
-						<label for="mdp">Mot de passe:</label>
-						<input class="input" type="password" name="mdp">
-					</div>
-					<div class="champs">
-						<label for="vmdp">Confirmation mot de passe:</label>
-						<input class="input" type="password" name="vmdp">
-					</div>
-				</div>
-				<div>
-					<input type="submit" name="validerform" value="Valider"/>
-				</div>
-			</form>	
-		</div>
+				</form>	
+			</div>
 		
 
 
