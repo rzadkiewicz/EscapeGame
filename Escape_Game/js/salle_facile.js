@@ -225,7 +225,7 @@ function revenirPageAccueil(){
 
 function Fin(){
     if (numsalle > 10) {
-        clearTimeout(start);
+        
         document.getElementById("cadenas").style.visibility ="hidden";
         document.getElementById("bonhommeContent").style.visibility ="visible";
         document.getElementById("imageBulle").style.visibility ="hidden";
