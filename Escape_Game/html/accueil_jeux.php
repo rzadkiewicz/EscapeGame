@@ -159,15 +159,22 @@
 		</div>
 		
 
+<!--/********* Multi-joueurs *********/-->
+
+		<div class="boutton" onclick="modeMultiJoueurs()" id="multijoueurs">
+			<span>Multijoueur</span>
+		</div>
 
 
-<!--/********* Déconnexion *********/-->
+
+		<!--/********* Déconnexion *********/-->
 
 		<div id = "submit_déconexion">
 		<form action="" method="post">
         <input type="submit" id="déconexion" value="Déconexion" class="boutton" name="déconexion" />
         </form>
 		</div>
+		
 		
 		<?php
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['déconexion']))
@@ -181,15 +188,8 @@
     }
 ?>
 
-
-
-
-<!--/********* Multi-joueurs *********/-->
-
-		<div class="boutton" onclick="modeMultiJoueurs()" id="multijoueurs">
-			<span>Multijoueur</span>
-		</div>
 	</div>
+	
 
 	<div id="barredubas">
 		<div class="boutton" onclick="ouvrirRegles()" id="regles">
@@ -235,3 +235,4 @@ function existe($x, $mot){
 ?>
 
 </html>
+
