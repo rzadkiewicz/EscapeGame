@@ -153,29 +153,31 @@
 			<span>Connexion</span>
 		</div>
 		<?php
-		if(!empty($_POST) && !empty($_POST['EMAIL']) && !empty($_POST['Mdp'])) {
-			$db = new Database('escapegame');
-		    $req = $db -> queryR('SELECT * FROM utilisateur WHERE email = "'.$_POST['EMAIL'].'"');
-			var_dump($req);
-			if(($_POST['Mdp'] = $req[0]->mdp)){
-				session_start();
-		        $_SESSION['auth'] = $req;
-				var_dump($_SESSION['auth']);
-		        header('Location: html/accueil_jeux.php');
-			}
-		}
-		?>
+        if(!empty($_POST) && !empty($_POST['EMAIL']) && !empty($_POST['Mdp'])) {
+            $db = new Database('escapegame');
+            $req = $db -> queryR('SELECT * FROM utilisateur WHERE email = "'.$_POST['EMAIL'].'"');
+
+            if ((!empty($req)) && ($_POST['Mdp'] = $req[0]->mdp)) {
+                session_start();
+                $_SESSION['auth'] = $req;
+                header('Location: html/accueil_jeux.php');
+            }else {
+                header("Refresh:0");
+            }
+
+        }
+        ?>
 		<div class="popup" id="connexion_popup">
 			<h1>Connexion</h1>
 			<form id="connexion_form" action="" method="POST">
 				<div id="formulaire">
 					<div class="champs">
 						<label for="AdresseMail">Adresse mail:</label>
-						<input class="input" type="text" id="EMAIL" name="EMAIL">
+						<input class="input" type="email" id="EMAIL" name="EMAIL" required>
 					</div>
 					<div class="champs">
 						<label for="MDP">Mot de passe:</label>
-						<input class="input" type="text" id="Mdp" name="Mdp">
+						<input class="input" type="text" id="Mdp" name="Mdp" required>
 					</div>
 				</div>
 				<div>
