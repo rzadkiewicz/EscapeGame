@@ -156,7 +156,7 @@ html,body {
 	border-image-outset: 10px;*/
 }
 #regles_popup, #paramètre_popup, #déconnexion_popup{ /* masquer la popup*/
-	display: none;
+	visibility: hidden;
 	/*padding: 150px 340px;*/
 	overflow-y: scroll;
 	-ms-overflow-style: none;  /* masquer la barre de défilement pour IE et Edge */
@@ -164,8 +164,9 @@ html,body {
 }
 /* masquer la barre de défilement pour safari, firefox et Opera*/
 #regles_popup::-webkit-scrollbar, #paramètre_popup::-webkit-scrollbar, #déconnexion_popup::-webkit-scrollbar {
-  display: none;
+  visibility: hidden;
 }
+
 #paragrapheregle{/*div contenant les regles du jeu*/
 	text-align: justify;
 	position: absolute;
@@ -174,6 +175,7 @@ html,body {
 	left: 2%;
 	right: 2%;
 }
+
 #formulaire{/*div contenant le formulaire*/
 	position: absolute;
 	top: 50%;
@@ -194,6 +196,7 @@ label, input{/*contenu popup*/
 form{
 	height: 60%;	
 }
+
 /*mise en forme du formulaire*/
 input[type=text]{
 	border:2px solid palegreen;
