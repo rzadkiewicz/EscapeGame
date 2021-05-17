@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
 <html>
-	
+
 <?php 
 
  if (!empty($_SESSION['auth'])){ header('Location:  html/accueil_jeux.php');}
 
 ?>
+
 <head>
 	<title>Page d'accueil</title>
 	<meta charset="utf-8"/>
@@ -37,7 +39,7 @@
 		<div class="boutton" onclick="ouvrirInscription()" id="inscription">
 			<span>Inscription</span>
 		</div>
-		<?php 
+	<?php 
 	
 		//fichier utile
 						
@@ -109,36 +111,38 @@
 		  header('Location: html/accueil_jeux.php');
         }
       ?>
-		<div class="popup" id="inscription_popup">
-				<h1>Inscription</h1>
-				<form id="inscription_form" action="" method="POST">
-					<div id="formulaire">
-						<div class="champs">
-							<label for="nom">Nom:</label>
-							<input class="input" type="text" name="nom" required placeholder="e.g. Kevin" pattern="[a-zA-Z]{1,}" title="Votre nom n'est pas valide!">
-						</div>
-						<div class="champs">
-							<label for="prenom">Prénom:</label>
-							<input class="input" type="text" name="prenom" required placeholder="e.g. Blanc" pattern="[a-zA-Z]{1,}" title="Votre prénom n'est pas valide!">
-						</div>
-						<div class="champs">
-							<label for="email">Adresse mail:</label>
-							<input class="input" type="email" name="email" required placeholder="e.g. kevin.blanc@gmail.com" pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z.]{2,15}" title="Votre adresse mail n'est pas valide!">
-						</div>
-						<div class="champs">
-							<label for="mdp">Mot de passe:</label>
-							<input class="input" type="password" name="mdp" required>
-						</div>
-						<div class="champs">
-							<label for="vmdp">Confirmation mot de passe:</label>
-							<input class="input" type="password" name="vmdp" required title="La confirmation n'est pas valide!">
-						</div>
+	  
+            <div class="popup" id="inscription_popup">
+			<h1>Inscription</h1>
+		
+			<form id="inscription_form" action="" method="POST">
+				<div id="formulaire">
+					<div class="champs">
+						<label for="nom">Nom:</label>
+						<input class="input" type="text" name="nom" required>
 					</div>
-					<div>
-						<input type="submit" name="validerform" value="Valider"/>
+					<div class="champs">
+						<label for="prenom">Prénom:</label>
+						<input class="input" type="text" name="prenom" required>
 					</div>
-				</form>	
-			</div>
+					<div class="champs">
+						<label for="email">Adresse mail:</label>
+						<input class="input" type="email" name="email" required>
+					</div>
+					<div class="champs">
+						<label for="mdp">Mot de passe:</label>
+						<input class="input" type="password" name="mdp" required>
+					</div>
+					<div class="champs">
+						<label for="vmdp">Confirmation mot de passe:</label>
+						<input class="input" type="password" name="vmdp" required>
+					</div>
+				</div>
+				<div>
+					<input type="submit" name="validerform" value="Valider"/>
+				</div>
+			</form>	
+		  </div>
 		
 
 
@@ -148,17 +152,30 @@
 		<div class="boutton" onclick="ouvrirConnexion()" id="connexion">
 			<span>Connexion</span>
 		</div>
+		<?php
+		if(!empty($_POST) && !empty($_POST['EMAIL']) && !empty($_POST['Mdp'])) {
+			$db = new Database('escapegame');
+		    $req = $db -> queryR('SELECT * FROM utilisateur WHERE email = "'.$_POST['EMAIL'].'"');
+			var_dump($req);
+			if(($_POST['Mdp'] = $req[0]->mdp)){
+				session_start();
+		        $_SESSION['auth'] = $req;
+				var_dump($_SESSION['auth']);
+		        header('Location: html/accueil_jeux.php');
+			}
+		}
+		?>
 		<div class="popup" id="connexion_popup">
 			<h1>Connexion</h1>
-			<form id="connexion_form" action="connection.php" method="POST">
+			<form id="connexion_form" action="" method="POST">
 				<div id="formulaire">
 					<div class="champs">
 						<label for="AdresseMail">Adresse mail:</label>
-						<input class="input" type="email" id="AdresseMail" name="AdresseMail" required placeholder="e.g. kevin.blanc@gmail.com" pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z.]{2,15}" title="Votre adresse mail n'est pas valide!">
+						<input class="input" type="text" id="EMAIL" name="EMAIL">
 					</div>
 					<div class="champs">
 						<label for="MDP">Mot de passe:</label>
-						<input class="input" type="password" id="MDP" name="MDP" required>
+						<input class="input" type="text" id="Mdp" name="Mdp">
 					</div>
 				</div>
 				<div>
@@ -212,6 +229,7 @@
 	
 
 </body>
+
 <?php
 function test_input($data) {
         $data = trim($data);
@@ -229,4 +247,5 @@ function existe($x, $mot){
 }
 
 ?>
+
 </html>
