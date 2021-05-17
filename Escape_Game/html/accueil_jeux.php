@@ -159,14 +159,6 @@
 		</div>
 		
 
-<!--/********* Multi-joueurs *********/-->
-
-		<div class="boutton" onclick="modeMultiJoueurs()" id="multijoueurs">
-			<span>Multijoueur</span>
-		</div>
-
-
-
 		<!--/********* Déconnexion *********/-->
 
 		<div id = "submit_déconexion">
