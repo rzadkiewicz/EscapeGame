@@ -2,15 +2,11 @@
 <html>
 
 <?php 
-
- if (isset($_SESSION['auth'])){ 
+session_start();
+ if (!isset($_SESSION['auth'])){ 
  
      header('Location:  ../accueil.php');
-
- } else { session_start();
-   }
-
-
+ }
  ?>
  
 <head>
@@ -168,15 +164,16 @@
 		</div>
 		
 		
-		<?php
+<?php
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['déconexion']))
     {
         func();
     }
     function func()
     {
-        session_destroy();
-        header('Location: ../accueil.php');		
+
+        unset($_SESSION['auth']);
+        header('Location: ../accueil.php');
     }
 ?>
 
